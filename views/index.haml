@@ -1,0 +1,24 @@
+%h1 FlushServ
+%p FlushServ is a web service which exposes the wonders of <a href="http://caca.zoy.org/wiki/toilet">TOIlet</a> to the world.
+
+%h2 Usage
+%p Send a <code>GET</code> or <code>PUT</code> request to FlushServ's index with a <code>message</code> parameter:
+%pre
+  :plain
+    
+    $ curl #{link "?message=Honk!"}
+    m    m               #        m
+    #    #  mmm   m mm   #   m    #
+    #mmmm# #" "#  #"  #  # m"     #
+    #    # #   #  #   #  #"#      "
+    #    # "#m#"  #   #  #  "m    #
+
+%p You may also use many standard toilet switches, e.g. #{link "?message=Honk!&gay&html"}
+
+%p The allowed switches are, in no particular order: <code>#{ALLOWED_OPTIONS.join(", ")}</code>. See the <a href="http://manpages.ubuntu.com/manpages/hardy/man1/toilet.1.html">toilet man page</a> for details on each.
+
+%h3 Fonts
+%p For a list of available fonts, visit #{link "fonts"}. These fonts may be used with the <code>f</code> and <code>font</code> switches.
+
+%h2 About
+%p FlushServ was created by Ross Paffett, but would not be possible without the work of the creator of toilet, Sam Hocevar. <a href="http://github.com/raws/flushserv">FlushServ itself</a> is just a bit of Ruby powered by <a href="http://www.sinatrarb.com/">Sinatra</a>.
